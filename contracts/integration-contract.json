@@ -1,0 +1,56 @@
+{
+  "contractId": "tiis-clean-integration/1.2.0",
+  "ledgerSchemaVersion": "integration-result/v1",
+  "chaincodeFunction": "RecordIntegrationResult",
+  "envelope": {
+    "maxBusinessIdLength": 120,
+    "maxPayloadSizeBytes": 8388608,
+    "payloadHashPattern": "^sha256:[a-f0-9]{64}$",
+    "payloadRefPattern": "^pg:artifact_payloads/[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+    "payloadStorageType": "POSTGRES",
+    "recordIdStrategy": "sha256(sourceOrg|recordType|businessIdType|businessId|payloadHash)-prefix24",
+    "submittedAtFormat": "canonical-utc-iso8601",
+    "targetOrg": "Target T"
+  },
+  "fabricPrincipal": {
+    "requiredNodeOu": "client",
+    "sourceMspBinding": "REQUIRED",
+    "writerAttribute": {
+      "name": "artifact.integrationWriter",
+      "value": "true"
+    },
+    "writerEnrollmentIdAttribute": "hf.EnrollmentID"
+  },
+  "query": {
+    "maxResponseBytes": 4194304,
+    "maxResults": 500,
+    "overflowBehavior": "FAIL_CLOSED"
+  },
+  "historicalCompatibility": {
+    "unknownWriteFunctions": "REJECT",
+    "historicalPrivateRecords": "NOT_IMPORTED"
+  },
+  "sources": {
+    "Source A": {
+      "businessIdType": "jobKey",
+      "mspId": "SourceAMSP",
+      "writerEnrollmentId": "writer-a",
+      "operations": [
+        "Yard-1",
+        "Yard-2",
+        "Yard-3"
+      ],
+      "recordType": "YARD_EVIDENCE"
+    },
+    "Source B": {
+      "businessIdType": "planKey",
+      "mspId": "SourceBMSP",
+      "writerEnrollmentId": "writer-b",
+      "operations": [
+        "Dispatch-1",
+        "Dispatch-2"
+      ],
+      "recordType": "DISPATCH_EVIDENCE"
+    }
+  }
+}

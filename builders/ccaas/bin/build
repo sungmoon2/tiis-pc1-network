@@ -1,0 +1,6 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2026 Sungmoon Park
+# SPDX-License-Identifier: Apache-2.0
+set -eu
+test -f "$1/connection.json"
+cp "$1/connection.json" "$3/connection.json"

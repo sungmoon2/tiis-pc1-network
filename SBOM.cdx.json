@@ -1,0 +1,28 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [],
+  "metadata": {
+    "component": {
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "tiis-pc1-network",
+      "publisher": "Sungmoon Park",
+      "type": "application",
+      "version": "0.1.0"
+    }
+  },
+  "properties": [
+    {
+      "name": "tiis:scope",
+      "value": "Source package inventory only; images and VM/host tools remain separate external runtime references in environment locks."
+    }
+  ],
+  "serialNumber": "urn:uuid:8bff5dc7-add4-5408-b42d-c0e5528d5b0b",
+  "specVersion": "1.6",
+  "version": 1
+}

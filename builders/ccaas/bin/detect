@@ -1,0 +1,6 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2026 Sungmoon Park
+# SPDX-License-Identifier: Apache-2.0
+set -eu
+# Only the exact metadata produced by the owned deterministic packager is accepted.
+test "$(tr -d '\n' < "$2/metadata.json")" = '{"label":"evidence_0.1.0","path":"","type":"ccaas"}'

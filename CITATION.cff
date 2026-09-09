@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this synthetic clean research artifact when using it."
+type: software
+title: "TIIS PC1 network: synthetic clean research artifact"
+authors:
+  - given-names: Sungmoon
+    family-names: Park
+    orcid: "https://orcid.org/0009-0002-3653-2829"
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/sungmoon2/tiis-pc1-network"
